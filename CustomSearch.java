@@ -35,7 +35,7 @@ public class CustomSearch {
 
         while (comp < 0 && current < list.getCount()) {
             prev = current;
-            current += 2;
+            current *= 2;
             if (current >= list.getCount()){
                 current = list.getCount() - 1;
             }
