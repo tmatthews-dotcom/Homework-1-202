@@ -33,9 +33,12 @@ public class CustomSearch {
         int prev = 0;
         int current = 1;
 
-        while (comp < 0) {
+        while (comp < 0 && current < list.getCount()) {
             prev = current;
             current += 2;
+            if (current >= list.getCount()){
+                current = list.getCount() - 1;
+            }
             comp = checkIndex(list, target, current);
         }
         
