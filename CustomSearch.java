@@ -27,9 +27,14 @@ public class CustomSearch {
     int locateItem(SortedList<T> list, T target)
     {
         debug("Looking for: " + target.toString());
-
+        
+        if (list.getCount() == 0) return -1;
+        
         int comp = checkIndex(list, target, 0);
-
+        
+        if (comp == 0) return 0;
+        if (list.getCount() == 1) return -1;
+    
         int prev = 0;
         int current = 1;
 
