@@ -41,6 +41,7 @@ public class CustomSearch {
             }
             comp = checkIndex(list, target, current);
             if (comp == 0) return current;
+            if (current == list.getCount() - 1 && comp < 0) return -1;
         }
         
         return binarySearch(list, target, prev, current);
