@@ -40,10 +40,12 @@ public class CustomSearch {
             current *= 2;
             if (current >= list.getCount()){
                 current = list.getCount() - 1;
+                comp = checkIndex(list, target, current);
+                if (comp == 0) return current;
+                break;
             }
             comp = checkIndex(list, target, current);
             if (comp == 0) return current;
-            if (current == list.getCount() - 1 && comp < 0) return -1;
         }
         
         return binarySearch(list, target, prev, current);
